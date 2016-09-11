@@ -1,0 +1,27 @@
+//
+// VARIABLES
+//
+// Colors
+$blue: #4183C4;
+// Grays
+$black: #000;
+$darkerGray: #222;
+$darkGray: #333;
+$gray: #666;
+$lightGray: #eee;
+$white: #fff;
+// Font stacks
+$pfont: sans-serif,
+"Segoe UI";
+$hfont: sans-serif,
+"Segoe UI Semibold";
+$helvetica: sans-serif,
+"Segoe UI";
+$helveticaNeue: sans-serif,
+"Segoe UI Semibold";
+// Mobile breakpoints
+@mixin mobile {
+    @media screen and (max-width: 640px) {
+        @content;
+    }
+}
