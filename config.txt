@@ -1,0 +1,2 @@
+Se usa Cloudflare como dns server.
+El dominio está en godaddy.
