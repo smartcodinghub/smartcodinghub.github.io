@@ -214,7 +214,7 @@ nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
-  font-size: 18px;
+  font-size: 20px;
 
   @include mobile {
     float: none;
@@ -224,6 +224,7 @@ nav {
   }
 
   a {
+    margin-left: 20px;
     color: $darkGray;
     text-align: right;
     font-weight: 300;
@@ -234,14 +235,20 @@ nav {
       color: $blue;
     }
   }
+}
 
-  nav:before {
-    color: $gray;
-    content: '{';
-    @include mobile {
-      margin: 0 10px;
-      color: $blue;
-    }
+nav::before {
+  display: inline;
+  color: $gray;
+  content: '{';
+}
+nav::after {
+  display: inline;
+  margin-left: 20px;
+  color: $gray;
+  content: '}';
+  @include mobile {
+    margin: 0;
   }
 }
 
