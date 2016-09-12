@@ -1,3 +1,6 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +16,7 @@
     <div class="wrapper-masthead">
         <div class="container">
             <header class="masthead clearfix">
-                <a href="./" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+                <a href="./" class="site-avatar"><img src="../{{ site.avatar }}" /></a>
 
                 <div class="site-info">
                     <h1 class="site-name"><a href=".">Mi nombre</a></h1>
@@ -29,20 +32,5 @@
             </header>
         </div>
     </div>
-
-    <div id="main" role="main" class="container">
-        Hola
-    </div>
-
-    <div class="wrapper-footer">
-        <div class="container">>
-            <footer class="footer">
-                {% include svg-icons.html %}
-            </footer>
-        </div>
-    </div>
-
-    {% include analytics.html %}
-</body>
 
 </html>
