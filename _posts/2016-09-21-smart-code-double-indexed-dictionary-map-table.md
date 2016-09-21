@@ -1,6 +1,6 @@
 ---
 layout: post
-title: &#lbrack;Smart Code&#rbrack; Double Indexed Dictionary&#sol;Map&#sol;Table
+title: '[Smart Code] Double Indexed Dictionary, Map or Table'
 ---
 
 I think that many of us need to index something using two or more fields. Well, the first and easiest way to solve it is using two Hastables (Hashmaps, Dictionaries,...) with the different fields as keys. Just like:
