@@ -7,7 +7,7 @@ I think that many of us need to index something using two or more fields. Well, 
 
 > This is C# but in Java/Android/C++ have we have getters instead of indexed properties and we can use HashMap, Hashtables, etc...
 
-```C#
+```c#
 public class DoubleIndexedDictionary<K1, K2, V>
 {
     private Dictionary<K1, V> firstIndex;
@@ -56,7 +56,7 @@ And here comes the trick, you can use a custom Object with as many fields as ind
 
 First the MultiKey Object for hold the keys:
 
-```C#
+```c#
 public struct MultiKey<TKey1, TKey2>
 {
     public readonly TKey1 Key1;
@@ -119,7 +119,7 @@ The custom hashcode returns a the hashcodes of the keys xored. Doing this, I can
 
 Now, the comparator:
 
-```C#
+```c#
 public class MultiKeyComparator<TKey1, TKey2> : IEqualityComparer<MultiKey<TKey1, TKey2>>
 {
     public Boolean Equals(MultiKey<TKey1, TKey2> left, MultiKey<TKey1, TKey2> right)
