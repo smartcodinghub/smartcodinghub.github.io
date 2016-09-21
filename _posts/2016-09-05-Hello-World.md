@@ -30,5 +30,3 @@ When I talk about this things I meant every thing about development whose main o
 ### Extras
 
 Of course, the blog will have many post about curiosities, tips about everything or just things I found interesting. Sometimes can be as simply as some games to learn coding, a project on a raspberry, etc...
-
-
