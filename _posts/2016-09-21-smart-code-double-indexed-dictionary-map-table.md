@@ -147,7 +147,7 @@ First, I override the HashCode method to return 0 so the dictionary will jump di
 
 And, finally, the DoubleIndexedDictionary class:
 
-```C#
+```c#
 public class DoubleDictionary<K1, K2, V>
 {
     private CartifDictionary<MultiKey<K1, K2>, V> innerDictionary;
