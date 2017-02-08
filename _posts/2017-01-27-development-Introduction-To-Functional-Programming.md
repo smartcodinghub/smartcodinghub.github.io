@@ -19,6 +19,7 @@ But, what all these concepts means?
 
 > I will deep more in the next posts, remember that this is an Introduction!
 
+<!--more-->
 
 ## Expressions
 
