@@ -15,6 +15,10 @@ avatar:
 # Flags below are optional
 #
 
+#Pagination
+paginate: 10
+paginate_path: "/posts/:num"
+
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
