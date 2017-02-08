@@ -5,6 +5,8 @@ title: Hello World!
 
 Yes, I know, that wasn't very creative. But we are developers and I think you started coding with a simple "Hello World!" program in C, PHP, JAVA or another language. And, as this is my first post, I will name it like my first program too.
 
+<!--more-->
+
 Now, some things about me. My name is Óscar Vicente Pérez and I'm from Spain. I started my journey in development three years ago with a Hello World! written in Java. Since that, I end my studies and worked half and a year with C# and .Net, Java, Php, and other languages and tecnologies.
 
 I difference between coding and develop. I define coding as write code, lines of code. And define develop as all the other things such design, think, maintain a project/program. 
