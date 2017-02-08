@@ -15,9 +15,9 @@ This will give you an easier and faster understanding on what's going on,
 you won't have to care about side effects and, of course, predictability.
 But, what all these concepts means?
 
-> I will deep more in the next posts, remember that this is an Introduction!
-
 <!--more-->
+
+> I will deep more in the next posts, remember that this is an Introduction!
 
 ## Expressions
 
