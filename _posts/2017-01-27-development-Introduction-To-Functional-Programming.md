@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '[Development] What is Function Programming: Introduction'
+title: '[Development] What is Functional Programming: Introduction'
 ---
 
 > This series of articles are a product of my personal research on functional programming. 
