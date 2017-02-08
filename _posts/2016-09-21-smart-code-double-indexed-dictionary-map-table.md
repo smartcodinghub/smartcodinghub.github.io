@@ -5,6 +5,8 @@ title: '[Smart Code] Double Indexed Dictionary, Map or Table'
 
 I think that many of us need to index something using two or more fields. Well, the first and easiest way to solve it is using two Hastables (Hashmaps, Dictionaries,...) with the different fields as keys. Just like:
 
+<!--more-->
+
 > This is C# but in Java/Android/C++ have we have getters instead of indexed properties and we can use HashMap, Hashtables, etc...
 
 ```c#
