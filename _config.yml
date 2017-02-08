@@ -19,6 +19,9 @@ avatar:
 paginate: 10
 paginate_path: "/posts/:num"
 
+#Read More
+excerpt_separator: "<!--more-->"
+
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
