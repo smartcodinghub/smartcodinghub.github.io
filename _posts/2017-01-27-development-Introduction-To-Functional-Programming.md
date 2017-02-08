@@ -3,8 +3,6 @@ layout: post
 title: '[Development] What is Function Programming: Introduction'
 ---
 
-# What is Functional Programming: Introduction
-
 > This series of articles are a product of my personal research on functional programming. 
 I will try to simplify all the concepts without losing the original meaning in the way.
 To help the transition between traditional programming and functional one, I will use C# at least
