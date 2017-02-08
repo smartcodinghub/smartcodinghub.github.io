@@ -9,8 +9,6 @@ To help the transition between traditional programming and functional one, I wil
 in the first few post.
 Let's try it!
 
-## What is Functional Programming?
-
 Functional programming is a paradigm focused on flow, expressions/operations, 
 stateless and declarative programming.
 This will give you an easier and faster understanding on what's going on, 
