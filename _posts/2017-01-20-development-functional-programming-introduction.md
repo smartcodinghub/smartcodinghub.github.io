@@ -40,7 +40,7 @@ Where f means a function:
 
 A more meaningful example:
 
-``sum(halve(pow(4, 2)))`` and ``4.pow(2).halve().sum()``
+``sum(halve(pow(4, 2)), 5)`` and ``4.pow(2).halve().sum(5)``
 
 In either way of doing it, you see clearly the flow that the program will follow. 
 
