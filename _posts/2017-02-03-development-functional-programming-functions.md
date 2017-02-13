@@ -3,11 +3,11 @@
 A function in functional programming is just as in other paradigms. It's a 
 sequence of operations that can be named to easily referenciate them. In example:
     
-    ``int Sum(int a, int b) { return a + b; }``
+``int Sum(int a, int b) { return a + b; }``
 
 or
 
-    ``Func<int, int, int> sum = (a, b) => a + b;``
+``Func<int, int, int> sum = (a, b) => a + b;``
 
 Here you can see two ways of declaring a Function in C#, the traditional (first one) 
 or the functional (second one).The first one is a simple method. The second one is a 
