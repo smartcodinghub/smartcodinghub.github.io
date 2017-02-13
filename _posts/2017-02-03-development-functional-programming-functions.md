@@ -14,6 +14,8 @@ or the functional (second one).The first one is a simple method. The second one 
 variable that points to an expresion so you can use it like a method. 
 It's a little big difference that you will love at the end of this series.
 
+<!--more-->
+
 ## Lambdas
 
 Is just another syntax for declaring an anonymous method. It allows you a more compact, meaningfull 
@@ -83,12 +85,12 @@ times the given number.
 **First-class** function is a programming concept that means that you can use a function 
 just like a class, object or literal anywhere in the program (like objects in OOP). 
 We have been doing this all the time by referring a function with a variable like and object.
-Example: ``Action<int> act = (n) => Console.WriteLine(n);
+Example: ``Action<int> act = (n) => Console.WriteLine(n);``
 
 With this concepts we achieve a new level of abstraction. Also, we gain a lot of composability.
 Examples:
 
-Composition:
+#### Composition:
 
 We can join two different methos to be executed always together via a **high-order** functions.
 
@@ -101,7 +103,7 @@ Let me explain this code a bit. ``func1`` and ``func2`` takes and return and int
 when executed, will execute func1 and pass the result to func2. So, if we execute
 ``composed(2)`` it will return ``8`` (``func1(2)`` = 4, ``func2(4)`` = 8). 
 
-Decoration:
+#### Decoration:
 
 We can wrap a function call with anything we want. Example:
 
