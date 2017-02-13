@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Development] What is Functional Programming: Functions
+title: '[Development] What is Functional Programming: Functions'
 ---
 
 A function in functional programming is just as in other paradigms. It's a 
