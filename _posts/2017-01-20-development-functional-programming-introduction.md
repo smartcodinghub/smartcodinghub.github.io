@@ -14,8 +14,19 @@ stateless and declarative programming.
 This will give you an easier and faster understanding on what's going on, 
 you won't have to care about side effects and, of course, predictability.
 But, what all these concepts means?
-
 <!--more-->
+
+## First, some context:
+
+For a little context, we need to see the history of the paradigms. 
+
+First, we have Machine Code. You have tons of instructions and near 0 reusability
+and it's so hard to understand.
+
+Over machine code we have Structured/Procedural programming. It's and abstraction
+over the machine code. Here we got methods that we can easily reuse and we
+don't have to worry about machine code and many operations since the compiler
+and the language APIs will take care of it. 
 
 > I will deep more in the next posts, remember that this is an Introduction!
 
