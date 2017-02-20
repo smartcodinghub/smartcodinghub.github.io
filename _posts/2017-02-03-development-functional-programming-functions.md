@@ -82,8 +82,14 @@ function that can either take a function as argument or return it. Example:
         return (n) => Enumerable.Range(0, times).Aggregate(n, (seed, next) => func(seed));
     }
 
-And we can call this with: ``ApplyManyTimes(n => n * 2, 3)(2);``. This will duplicate three
-times the given number.
+And we can call this with: 
+
+    /* New Func */
+    Func<int, int> unmodifiedFunc = (n) => n * 2;
+    Func<int, int> modifiedFunc = ApplyManyTimes(unmodifiedFunc, 3);
+    int result = modifiedFunc(2);
+
+The modifiedFunc is will duplicate three times the given number.
 
 **First-class** function is a programming concept that means that you can use a function 
 just like a class, object or literal anywhere in the program (like objects in OOP). 
@@ -97,14 +103,23 @@ Examples:
 
 We can join two different methos to be executed always together via a **high-order** functions.
 
+    public Func<T, TReturn> Compose<T, TReturn>(Func<T, TReturn> f1, Func<T, TReturn> f2)
+    {
+        return (f1, f2) => (n) => f2(f1(n));
+    }
+
     Func<int, int> func1 = (n) => n * 2; // Doubling
     Func<int, int> func2 = (n) => n + n; // Doubling again
-    Func<Func<int, int>, Func<int, int>, Func<int, int>> composed = (f1, f2) => (n) => f2(f1(n));
+    Func<int, int> composed = Compose(f1, f2);
 
 Let me explain this code a bit. ``func1`` and ``func2`` takes and return and integer. 
-``composed`` take two ``Func<int, int>`` and return only one ``Func<int, int>`` which,
-when executed, will execute func1 and pass the result to func2. So, if we execute
-``composed(2)`` it will return ``8`` (``func1(2)`` = 4, ``func2(4)`` = 8). 
+``Compose`` takes two functions like ``func1`` and ``func2`` and return only one function.
+That function will execute ``f1`` and give the result as the argument to ``f2``.  So, if we execute
+``composed(2)`` it will return ``8`` (``func1(2)`` = 4, ``func2(4)`` = 8). After composing,
+you will can call this function as many times as you want.
+
+Of course, you can do it with the Composition pattern, but you need a lot more of code. And, with
+the functional approach, the composed function will have a smaller scope and be trully private.
 
 #### Decoration:
 
@@ -138,5 +153,32 @@ Here we use a Decorate method which gives us a decorated version of the func we 
 ### Benefits
 
 Well... composing, decorating, expansion of other functions without touch the original code.
-Many more, you can use it in near every context you need. Like applying a function 
-multiple times without a loop as shown  in the first example.
+Many more, but... this is the theorical, abstract and obscure explanation. But I will give you a practical use 
+case in the real world.
+
+Imagine an old and obscure legacy system (Unfortunatly that's so easy, right?). 
+
+#### First case
+
+You found that you need to use a method with some additions many times like:
+
+    Calculator calculator = new Calculator();
+    Result result = calculator.CalculateInfo(x, y);
+    Result correctedResult = calculator.NewApplyCorrections(x, y, info);
+
+Of course, you can make a method in the Calculator class or you can make an extension method. The First
+way doesn't follow the SOLID principles an the second one gives the method a high scope. You only
+want to use it in your own method.
+
+    Func<int, int, Result> NewCalculateInfo = (x, y) => 
+    {
+        Calculator calculator = new Calculator();
+        Result result = calculator.CalculateInfo(x, y);
+        return calculator.NewApplyCorrections(x, y, info);
+    };
+
+Now you can use it as many times as you want, but only in its _scope_. You didn't change the old class
+and you don't have to worry about some one using your help method without undertanding it.
+
+#### Second case
+
