@@ -57,26 +57,26 @@ and many other thigs. You all know.
 
 Example:
 
-    ```csharp
-    interface IPrinter { void Print(int i); }
+```csharp
+interface IPrinter { void Print(int i); }
 
-    public void Process(int max, IPrinter printer)
+public void Process(int max, IPrinter printer)
+{
+    /* We start a loop, with its counter */
+    for(int i = 0; i < max; i++)
     {
-        /* We start a loop, with its counter */
-        for(int i = 0; i < max; i++)
-        {
-            /* We use and object that implements IPrinter to print it (DI here) */
-            printer.Print(i * i);
-        }
+        /* We use and object that implements IPrinter to print it (DI here) */
+        printer.Print(i * i);
     }
+}
 
-    ...
-    Process(20, new ConsolePrinter());
-    ...
-    ...
-    Process(20, new LoggerPrinter());
-    ...
-    ```
+...
+Process(20, new ConsolePrinter());
+...
+...
+Process(20, new LoggerPrinter());
+...
+```
 
 > Now you are fully **functional**
 
