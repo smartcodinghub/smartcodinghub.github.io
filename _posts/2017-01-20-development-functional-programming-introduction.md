@@ -28,20 +28,33 @@ and the language APIs will take care of it. But, we can still taht the code look
 An example:
 
 ```csharp
-public void static Process(int max)
+enum PrintEnum { Console, Logger }
+
+public void static Process(int max, PrintEnum pe)
 {
     /* We start a loop, with its counter */
     for(int i = 0; i < max; i++)
     {
-        /* We call Print with the pow */
-        Print(i * i);
+        switch(pe)
+            case PrintEnum.Console:
+                PrintConsole(i * i);
+                break;
+            case PrintEnum.Logger:
+                PrintLogger(i * i);
+                break;
     }
 }
 
-public static void Print(int i)
+public static void PrintConsole(int i)
 {
     /* We say how we print it */
     Console.WriteLine(i);
+}
+
+public static void PrintLogger(int i)
+{
+    /* We say how we print it */
+    Logger.Print(i);
 }
 
 ...
