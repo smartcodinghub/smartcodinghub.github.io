@@ -43,6 +43,10 @@ An example:
         Console.WriteLine(i);
     }
 
+    ...
+    Process(20);
+    ...
+
 > Then, we have **class**
 
 Then, we started using **OOP** were we bring a new level of abstraction. Here we got classes,
@@ -63,6 +67,13 @@ Example:
         }
     }
 
+    ...
+    Process(20, new ConsolePrinter());
+    ...
+    ...
+    Process(20, new LoggerPrinter());
+    ...
+
 > Now you are fully **functional**
 
 And what comes after OOP? Here comes the **Functional Programming** (FP). I don't see it as a
@@ -79,6 +90,22 @@ The last one:
         // We just say what we want, from 0 to max, select the power, and for each, print it.
         Enumerable.Range(0, max).Select(i => i * i).ForEach(print);
     }
+
+    ...
+    Process(20, (i) => Console.WriteLine(i));
+    ...
+    Or, complementing it with OOP
+    ...
+    Process(20, (i) => new ConsolePrinter().Print(i));
+    ...
+    Now, we want to log and print    
+    ...
+    Process(20, (i) => 
+    { 
+        new LoggerPrinter().Print(i);
+        new ConsolePrinter().Print(i);
+    });
+    ...
 
 > I will deep more in the next posts, remember that this is an **Introduction**!
 
