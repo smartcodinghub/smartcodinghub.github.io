@@ -29,17 +29,17 @@ An example:
 
     public void static Process(int max)
     {
-        // We start a loop, with its counter
+        /* We start a loop, with its counter */
         for(int i = 0; i < max; i++)
         {
-            // We call Print with the pow
+            /* We call Print with the pow */
             Print(i * i);
         }
     }
 
     public static void Print(int i)
     {
-        // We say how we print it
+        /* We say how we print it */
         Console.WriteLine(i);
     }
 
@@ -59,10 +59,10 @@ Example:
 
     public void Process(int max, IPrinter printer)
     {
-        // We start a loop, with its counter
+        /* We start a loop, with its counter */
         for(int i = 0; i < max; i++)
         {
-            // We use and object that implements IPrinter to print it (DI here)
+            /* We use and object that implements IPrinter to print it (DI here) */
             printer.Print(i * i);
         }
     }
@@ -94,18 +94,18 @@ The last one:
     ...
     Process(20, (i) => Console.WriteLine(i));
     ...
-    Or, complementing it with OOP
+    /* Or, complementing it with OOP */
     ...
     Process(20, (i) => new ConsolePrinter().Print(i));
     ...
-    Now, we want to log and print    
+    /* Now, we want to log and print */ 
     ...
     Process(20, (i) => 
     { 
         new LoggerPrinter().Print(i);
         new ConsolePrinter().Print(i);
     });
-    ...
+    ...  
 
 > I will deep more in the next posts, remember that this is an **Introduction**!
 
