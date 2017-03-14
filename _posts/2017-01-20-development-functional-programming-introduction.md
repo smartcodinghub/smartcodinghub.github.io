@@ -9,11 +9,6 @@ To help the transition between traditional programming and functional one, I wil
 in the first few post.
 Let's try it!
 
-Functional programming is a paradigm focused on flow, expressions/operations, 
-stateless and declarative programming.
-This will give you an easier and faster understanding on what's going on, 
-you won't have to care about side effects and, of course, predictability.
-But, what all these concepts means?
 <!--more-->
 
 ## First, some context:
@@ -39,8 +34,10 @@ and many other thigs. You all know.
 > Now you are fully **functional**
 
 And what comes after OOP? Here comes the **Functional Programming** (FP). I don't see it as a
-subtitution of OOP rather than a complement. FP is highly focused
-in flows. By using FP
+subtitution of OOP rather than a _**complement**_. FP is highly focused
+in flows. By using FP you are making your aplication/program modular, extensible, less error prone
+and stateless. As you won't have states or side effects, your program si also easily to predict!
+Also, you will program in a declarative way, rather than a imperative one.
 
 > I will deep more in the next posts, remember that this is an Introduction!
 
