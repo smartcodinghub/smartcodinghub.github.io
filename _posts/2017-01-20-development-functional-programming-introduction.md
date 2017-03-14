@@ -27,6 +27,7 @@ and the language APIs will take care of it. But, we can still taht the code look
 
 An example:
 
+    ```
     public void static Process(int max)
     {
         /* We start a loop, with its counter */
@@ -46,6 +47,7 @@ An example:
     ...
     Process(20);
     ...
+    ```
 
 > Then, we have **class**
 
@@ -55,6 +57,7 @@ and many other thigs. You all know.
 
 Example:
 
+    ```csharp
     interface IPrinter { void Print(int i); }
 
     public void Process(int max, IPrinter printer)
@@ -73,6 +76,7 @@ Example:
     ...
     Process(20, new LoggerPrinter());
     ...
+    ```
 
 > Now you are fully **functional**
 
