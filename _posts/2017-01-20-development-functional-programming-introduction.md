@@ -65,7 +65,7 @@ Process(20);
 ...
 ```
 
-> Then, we have **class**
+> That had no **class**
 
 Then, we started using **OOP** were we bring a new level of abstraction. Here we got classes,
 objects and behaviour. We use this to encapsulate and easy reuse all what we do. We can use inheritance
@@ -94,7 +94,7 @@ Process(20, new LoggerPrinter());
 ...
 ```
 
-> Now you are fully **functional**
+> Too much boilerplate code for reusing?
 
 And what comes after OOP? Here comes the **Functional Programming** (FP). I don't see it as a
 subtitution of OOP rather than a _**complement**_. FP is highly focused
