@@ -25,19 +25,60 @@ over the machine code. We got methods we can easily reuse and we
 don't have to worry about machine code and many operations since the compiler
 and the language APIs will take care of it. But, we can still taht the code looks similar.
 
-> Now, we have **class**
+An example:
+
+    public void static Process(int max)
+    {
+        // We start a loop, with its counter
+        for(int i = 0; i < max; i++)
+        {
+            // We call Print with the pow
+            Print(i * i);
+        }
+    }
+
+    public static void Print(int i)
+    {
+        // We say how we print it
+        Console.WriteLine(i);
+    }
+
+> Then, we have **class**
 
 Then, we started using **OOP** were we bring a new level of abstraction. Here we got classes,
 objects and behaviour. We use this to encapsulate and easy reuse all what we do. We can use inheritance
 and many other thigs. You all know.
+
+Example:
+
+    interface IPrinter { void Print(int i); }
+
+    public void Process(int max, IPrinter printer)
+    {
+        // We start a loop, with its counter
+        for(int i = 0; i < max; i++)
+        {
+            // We use and object that implements IPrinter to print it (DI here)
+            printer.Print(i * i);
+        }
+    }
 
 > Now you are fully **functional**
 
 And what comes after OOP? Here comes the **Functional Programming** (FP). I don't see it as a
 subtitution of OOP rather than a _**complement**_. FP is highly focused
 in flows. By using FP you are making your aplication/program **modular, extensible, less error prone
-and stateless**. As you won't have states or side effects, your program si also easily to predict!
-Also, you will program in a _**declarative**_ way, rather than a _**imperative**_ one.
+and stateless**. As you won't have states or side effects, your program si also easy to predict!
+Also, you will program in a _**declarative**_ way, rather than a _**imperative**_ one which makes your 
+code easier to understand.
+
+The last one:
+
+    public void Process(int max, Action<int> print)
+    {
+        // We just say what we want, from 0 to max, select the power, and for each, print it.
+        Enumerable.Range(0, max).Select(i => i * i).ForEach(print);
+    }
 
 > I will deep more in the next posts, remember that this is an **Introduction**!
 
