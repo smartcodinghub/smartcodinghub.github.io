@@ -35,11 +35,11 @@ and many other thigs. You all know.
 
 And what comes after OOP? Here comes the **Functional Programming** (FP). I don't see it as a
 subtitution of OOP rather than a _**complement**_. FP is highly focused
-in flows. By using FP you are making your aplication/program modular, extensible, less error prone
-and stateless. As you won't have states or side effects, your program si also easily to predict!
-Also, you will program in a declarative way, rather than a imperative one.
+in flows. By using FP you are making your aplication/program **modular, extensible, less error prone
+and stateless**. As you won't have states or side effects, your program si also easily to predict!
+Also, you will program in a _**declarative**_ way, rather than a _**imperative**_ one.
 
-> I will deep more in the next posts, remember that this is an Introduction!
+> I will deep more in the next posts, remember that this is an **Introduction**!
 
 ## Expressions
 
