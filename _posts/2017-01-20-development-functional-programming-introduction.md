@@ -20,23 +20,25 @@ But, what all these concepts means?
 
 For a little context, we need to see the history of the paradigms. 
 
-First, we have Machine Code. You have tons of instructions and near 0 reusability
+First, we have **Machine Code**. You have tons of instructions and near 0 reusability
 and it's so hard to understand.
 
-> Structured Programming arrives!
+> **Structured Programming** arrives!
 
-Over machine code we have Structured/Procedural programming. It's and abstraction
-over the machine code. Here we got methods that we can easily reuse and we
+Over machine code we have **Structured/Procedural programming**. An abstraction
+over the machine code. We got methods we can easily reuse and we
 don't have to worry about machine code and many operations since the compiler
 and the language APIs will take care of it. But, we can still taht the code looks similar.
 
-> Now, we have class
+> Now, we have **class**
 
-Then, we started using OOP were we bring a new level of abstraction. Here we got classes,
+Then, we started using **OOP** were we bring a new level of abstraction. Here we got classes,
 objects and behaviour. We use this to encapsulate and easy reuse all what we do. We can use inheritance
 and many other thigs. You all know.
 
-And what comes after OOP? Here comes the Functional Programming (FP). I don't see it as a
+> Now you are fully **functional**
+
+And what comes after OOP? Here comes the **Functional Programming** (FP). I don't see it as a
 subtitution of OOP rather than a complement. FP is highly focused
 in flows. By using FP
 
