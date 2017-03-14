@@ -35,6 +35,7 @@ public void static Process(int max, PrintEnum pe)
     /* We start a loop, with its counter */
     for(int i = 0; i < max; i++)
     {
+        /* We must say what Print way want */
         switch(pe)
         {
             case PrintEnum.Console:
