@@ -94,7 +94,7 @@ Process(20, new LoggerPrinter());
 ...
 ```
 
-> Too much boilerplate code for reusing?
+> Too much boilerplate code for a little gain?
 
 And what comes after OOP? Here comes the **Functional Programming** (FP). I don't see it as a
 subtitution of OOP rather than a _**complement**_. FP is highly focused
@@ -131,39 +131,34 @@ Process(20, (i) =>
 
 > I will deep more in the next posts, remember that this is an **Introduction**!
 
-## Expressions
-
-Expressions are to functional programming what statements are to imperative programming.
-An expressions receives an input and produces and output by applying an operation.
-Like ``(a, b) => a + b``, which takes two values and produces its sum by applying the
-``+`` operator. Here comes some concepts: functions, lambdas, pure functions and 
-high order functions.
-
 ## Flow
 
 Why I said this paradigm is focused in flow? Well, the flow is tipically part
 of the syntax in functional langagues. Its like a chain of calls or pipeline. We start 
 with the input, apply a function, the returned value of that functions act as the input 
-of the next one and so on. Example:
+of the next one and so on. We can use the word Stream too. 
 
-Where f means a function: 
+Example:
+
+Where f means a function that works on a collection: 
 
 ``f3(f2(f1(f(input))))`` and the "fluent" way: ``input.f().f1().f2().f3()``
 
-A more meaningful example:
+With linq we can see things like:
 
-``sum(halve(pow(4, 2)), 5)`` and ``4.pow(2).halve().sum(5)``
+``Enumerable.Range(0, 50).Select(Pow).Select(Halve).ForEach(Print);``
 
-In either way of doing it, you see clearly the flow that the program will follow. 
+We can see easily what the program do. Generate numbers from 0 to 50,
+power, halve and the print them. And we have lazyness, but that's for another post.
 
 ## Stateless and side effects
 
 With stateless I mean that the functions won't behave differently based on a state 
-with the same input and the data is not mutable. And won't have 
-side effects (modify something outside its scope) or at least minize the side effects.
-Doing it this way, we ensure that the order of evaluation doesn't matters, 
-so you don't need a context to understand whats going on, and 
-make the program highly parallelizable.
+with the same input and the data is not mutable. Just like a Math operation. And won't have 
+side effects (modify something outside its scope). Doing it this way, we ensure that 
+the order of evaluation doesn't matters, so you don't need a context to understand 
+whats going on, and make the program highly parallelizable as you won't have 
+race conditions.
 
 ## Conclusion
 
