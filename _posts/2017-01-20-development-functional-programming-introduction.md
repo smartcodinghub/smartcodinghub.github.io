@@ -27,27 +27,27 @@ and the language APIs will take care of it. But, we can still taht the code look
 
 An example:
 
-    ```
-    public void static Process(int max)
+```csharp
+public void static Process(int max)
+{
+    /* We start a loop, with its counter */
+    for(int i = 0; i < max; i++)
     {
-        /* We start a loop, with its counter */
-        for(int i = 0; i < max; i++)
-        {
-            /* We call Print with the pow */
-            Print(i * i);
-        }
+        /* We call Print with the pow */
+        Print(i * i);
     }
+}
 
-    public static void Print(int i)
-    {
-        /* We say how we print it */
-        Console.WriteLine(i);
-    }
+public static void Print(int i)
+{
+    /* We say how we print it */
+    Console.WriteLine(i);
+}
 
-    ...
-    Process(20);
-    ...
-    ```
+...
+Process(20);
+...
+```
 
 > Then, we have **class**
 
@@ -89,27 +89,29 @@ code easier to understand.
 
 The last one:
 
-    public void Process(int max, Action<int> print)
-    {
-        // We just say what we want, from 0 to max, select the power, and for each, print it.
-        Enumerable.Range(0, max).Select(i => i * i).ForEach(print);
-    }
+```csharp
+public void Process(int max, Action<int> print)
+{
+    // We just say what we want, from 0 to max, select the power, and for each, print it.
+    Enumerable.Range(0, max).Select(i => i * i).ForEach(print);
+}
 
-    ...
-    Process(20, (i) => Console.WriteLine(i));
-    ...
-    /* Or, complementing it with OOP */
-    ...
-    Process(20, (i) => new ConsolePrinter().Print(i));
-    ...
-    /* Now, we want to log and print */ 
-    ...
-    Process(20, (i) => 
-    { 
-        new LoggerPrinter().Print(i);
-        new ConsolePrinter().Print(i);
-    });
-    ...  
+...
+Process(20, (i) => Console.WriteLine(i));
+...
+/* Or, complementing it with OOP */
+...
+Process(20, (i) => new ConsolePrinter().Print(i));
+...
+/* Now, we want to log and print */ 
+...
+Process(20, (i) => 
+{ 
+    new LoggerPrinter().Print(i);
+    new ConsolePrinter().Print(i);
+});
+...  
+```
 
 > I will deep more in the next posts, remember that this is an **Introduction**!
 
