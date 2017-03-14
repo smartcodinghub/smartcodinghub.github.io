@@ -36,12 +36,14 @@ public void static Process(int max, PrintEnum pe)
     for(int i = 0; i < max; i++)
     {
         switch(pe)
+        {
             case PrintEnum.Console:
                 PrintConsole(i * i);
                 break;
             case PrintEnum.Logger:
                 PrintLogger(i * i);
                 break;
+        }
     }
 }
 
